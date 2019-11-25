@@ -169,8 +169,23 @@ enum ArrowNames {
 
 function createImage(s: string) { return s; }
 
-function showImage(image: string, interval: number) {
-
+function showImage(s: string, interval: number) {
+    let x = 0
+    let y = 0;
+    for(let i =0; i<s.length; i++) {
+        if (s[i] == "." || s[i] == "#") {
+            if (s[i] == ".") {
+                microbit.unplot(x,y)
+            } else {
+                microbit.plot(x,y)
+            }
+            x += 1;
+            if (x ==5 ) {
+                y += 1;
+                x = 0;
+            }
+        }
+    }
 }
 
 namespace microbit {
@@ -183,12 +198,6 @@ namespace microbit {
     //% weight=90 blockGap=8
     //% blockId=basic_show_icon
     //% block="show icon %i" icon="\uf00a"
-    //% parts="ledmatrix"
-    //% help=basic/show-icon
-    //% icon.fieldEditor="imagedropdown"
-    //% icon.fieldOptions.columns="5"
-    //% icon.fieldOptions.width="380"
-    //% icon.fieldOptions.maxRows=4
     export function showIcon(icon: IconNames, interval = 600) {
         let res = images.iconImage(icon)
         showImage(res, interval)
