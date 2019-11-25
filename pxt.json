@@ -9,7 +9,8 @@
         "main.ts",
         "README.md",
         "microbit.ts",
-        "icons.ts"
+        "icons.ts",
+        "icons.jres"
     ],
     "preferredEditor": "tsprj",
     "testFiles": [
