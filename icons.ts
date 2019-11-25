@@ -198,6 +198,10 @@ namespace microbit {
     //% weight=90 blockGap=8
     //% blockId=basic_show_icon
     //% block="show icon %i" icon="\uf00a"
+    //% icon.fieldEditor="imagedropdown"
+    //% icon.fieldOptions.columns="5"
+    //% icon.fieldOptions.width="380"
+    //% icon.fieldOptions.maxRows=4
     export function showIcon(icon: IconNames, interval = 600) {
         let res = images.iconImage(icon)
         showImage(res, interval)

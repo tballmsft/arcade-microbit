@@ -1,4 +1,6 @@
-for (let index = 0; index <= 4; index++) {
-    microbit.plot(index, index)
-}
-microbit.toggleAll()
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    microbit.showIcon(IconNames.Sad)
+})
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    microbit.showIcon(IconNames.Happy)
+})
