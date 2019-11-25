@@ -8,9 +8,10 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "microbit.ts"
+        "microbit.ts",
+        "icons.ts"
     ],
-    "preferredEditor": "blocksprj",
+    "preferredEditor": "tsprj",
     "testFiles": [
         "test.ts"
     ]
