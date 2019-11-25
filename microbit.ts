@@ -129,7 +129,7 @@ export function toggle(x: number, y: number): void {
 /**
  * Turns all LEDS on
  */
-//%
+//% block
 export function plotAll(): void {
     for (let i = 0; i < 5; i++) {
         for (let j = 0; j < 5; j++) {
@@ -141,7 +141,7 @@ export function plotAll(): void {
 /**
  * Inverts the current LED display
  */
-//%
+//% block 
 export function toggleAll(): void {
     for (let i = 0; i < 5; i++) {
         for (let j = 0; j < 5; j++) {
@@ -165,7 +165,7 @@ let barGraphHighLast = 0;
 //% blockId=device_plot_bar_graph block="plot bar graph of %value up to %high" icon="\uf080" blockExternalInputs=true
 //% parts="ledmatrix"
 export function plotBarGraph(value: number, high: number): void {
-    const now = 0;
+    const now = game.runtime();
     console.logValue("", value);
     value = Math.abs(value);
 
